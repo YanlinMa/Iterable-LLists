@@ -1,13 +1,15 @@
-// Team CVSA -- Shanjeed Ali and Calvin Vuong
+// Team NameTBD
 // APCS2 pd10
-// HW15 -- Generically Speaking...
-// 2016-03-18
+// HW18 -- For Each Is the Goal
+// 2016-03-28
 
 /*****************************************************
  * class LList
  * Implements a linked list
  * Version 03 uses doubly-linked nodes
  *****************************************************/
+
+import java.util.Iterator;
 
 public class LList<T> implements List<T> { //your List.java must be in same dir
 
@@ -213,6 +215,45 @@ public class LList<T> implements List<T> { //your List.java must be in same dir
 	return retStr;
     }
 
+    public Iterator<T> iterator(){
+	MyIterator it = new MyIterator();
+	return it;
+    }
+    
+    private class MyIterator implements Iterator<T>{
+	private DLLNode<T> current;
+	private boolean oktor;
+	
+	public MyIterator(){
+	    current = _head;
+	    oktor = true;
+	}
+	public boolean hasNext(){
+	    if (this.getNext().equals(null)){
+		return false;
+	    }
+	    else{ 
+		return true;
+	    }
+	}
+
+	public T next(){
+	    current = this.getNext();
+	    oktor = true;
+	    return current;
+	}
+
+	public void remove(){
+	    if (oktor = false){
+		throw IllegalStateException();
+	    }
+	    else{
+		this.getPrev().setNext(this.getNext);
+		this.getNext().setPrev(this.getPrev);  
+		oktor = false;
+	    }
+	}
+    }
 
     //main method for testing
     public static void main( String[] args ) {
