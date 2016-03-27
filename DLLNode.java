@@ -1,7 +1,7 @@
-// Team CVSA -- Shanjeed Ali and Calvin Vuong
+// Team Matryoshka- Shanjeed Ali, Andrea Ma
 // APCS2 pd10
-// HW15 -- Generically Speaking...
-// 2016-03-18
+// HW18 -- For Each Is the Goal
+// 2016-03-28
 
 /*****************************************************
  * class DLLNode
