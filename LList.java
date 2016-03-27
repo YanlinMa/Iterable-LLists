@@ -303,6 +303,3 @@ public class LList<T> implements List<T> { //your List.java must be in same dir
     }
 
 }//end class LList
-
-
-
